@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Your API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body class="bg-[#00002c]">
+    <h1 class="text-3xl text-center m-3 text-white">Test Your API</h1>
+    <div class="text-center mt-14">
+        <div>
+            <select name="methods" id="methods" class="border-2 p-1">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+            </select>
+            <input type="text" class="p-1 border-2 w-[13rem] sm:w-[30rem]" id="url" placeholder="Type URL here...">
+            <button class="bg-[#e03650] text-white p-1 border-2 border-[#e03650] w-[5rem]" id="send">Send</button>
+        </div>
+        <div class="text-center text-white text-xl my-4">
+            <button id="json" class="m-[2rem]">JSON</button>
+            <button id="params" class="m-[2rem]">Custom Parameters</button>
+        </div>
+        <div id="jsonBody">
+            <textarea name="json" cols="40" rows="7"  class="rounded text-white bg-[#00002c] border-2 p-5 sm:w-[40rem]" placeholder='JSON format must be like: {"name":"John", "age":30, "city":"New York"}...' id="requestJsonText"></textarea>
+        </div>
+        <div id="allParams">
+        <div class="my-5" id="paramsBody">
+            <input type="text" id="paramsList1" placeholder="parameter" class="bg-[#00002c] border-b-2 w-[7rem] sm:w-[15rem] m-5 text-white hover:outline-none">
+
+            <input type="text" id="valueList1" placeholder="value" class="bg-[#00002c] border-b-2 w-[7rem] sm:w-[15rem] m-5 text-white hover:outline-none">
+
+            <button id="plus" class="border-2 text-white px-3 text-lg">+</button>
+        </div>
+    </div>
+        <div class="mt-5 w-[20rem] sm:w-[38rem] m-auto">
+            <pre class="h-[15rem]"><code class="language-javascript" id="response">Your response will appear here...</code></pre> 
+        </div>
+    </div>
+    <script src="prism.js"></script>
+</body>
+</html>
